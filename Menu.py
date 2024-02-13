@@ -6,7 +6,7 @@ from Income import SingleIncome, HourlyIncome, SalaryIncome
 from Expense import Expense
 from Budget import WeeklyBudget, YearlyBudget
 
-cred = credentials.Certificate("JSONFiles/finance-manager-b9e75-firebase-adminsdk-yxfff-447a73af8b.json")
+cred = credentials.Certificate("JSONFiles/finance-manager.json")
 finance_app = firebase_admin.initialize_app(cred)
 
 db = firestore.client() # Data Base

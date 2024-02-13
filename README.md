@@ -14,9 +14,7 @@ A user can also create two types of budgets: weekly and yearly. As the names wou
 
 # Cloud Database
 
-{Describe the cloud database you are using.}
-
-This project uses Firestore which is a part of Google Firebase.
+This project uses Firestore which is a part of Google Firebase. The JSON file was provided by Google Firebase and was not uploaded.
 
 The database impliments the use of these seven collections
 
