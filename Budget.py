@@ -131,7 +131,7 @@ class Budget():
 
     def set_expenses(self, cloud_dict):
         ''' Reorganize the expenses for editing from the cloud '''
-        expense_list = []
+        expense_list = [] #this is a list of lists
         for item in cloud_dict:
             working_list = []
             working_list.append(item)
@@ -141,7 +141,8 @@ class Budget():
         for item in expense_list:
             expense = self.ExpenseBudget()
             expense.set_expense(item)
-            self.expense_list.append(expense)
+            if expense not in self.expense_list:
+                self.expense_list.append(expense) # this is a list of expenses
 
     def get_cloud_summary(self):
         '''

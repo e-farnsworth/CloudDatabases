@@ -420,6 +420,7 @@ class Menu:
         budget = self.working_list[bud_index] # Extract the Budget
         print('=========================')
         # load the budget details
+        expenses_dict = {}
         working_dict = budget.get_cloud_summary()
         name = working_dict['name']
         bud_type = working_dict['type']
@@ -437,7 +438,7 @@ class Menu:
         # Edit the expense
         print('\nWould you like to:')
         print('1. Edit the name')
-        print('2. Edit Ecpected Expenses')
+        print('2. Edit Expected Expenses')
         print('3. Delete this Budget')
         choice = input('Enter your choice: ')
         print('=========================')
@@ -593,8 +594,7 @@ class Menu:
             elif self.choice == '3': # view budgets
                 self.budget_menu()         
             elif self.choice == '4': # quit
-                # end program
-                return  
+                return # end program
             else:
                 print('Choice is out of range. Please choose again.')
                 self.main_menu()
@@ -757,4 +757,5 @@ if __name__ == '__main__':
 Notes for updates
 Summary for expenses uses date to call only recent expenses (future update)
 Add naming warning to all naming procedures
+When calling a budget twice in a row, will duplicate the expected expenses
 '''
